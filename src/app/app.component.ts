@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GithubReposService } from './github-repos.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'github-serach';
+
+  constructor(private repoService : GithubReposService){}
 }
