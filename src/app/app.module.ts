@@ -8,6 +8,7 @@ import { UsersComponent } from './users/users.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SerachFormComponent } from './serach-form/serach-form.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchFormComponent } from './search-form/search-form.component';
     UsersComponent,
     NavbarComponent,
     SerachFormComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
