@@ -10,5 +10,13 @@ import { GithubReposService } from './github-repos.service';
 export class AppComponent {
   title = 'github-serach';
 
+  githubUserRepos: any =[];
   constructor(private repoService : GithubReposService){}
+
+  getRepos(){
+  this.repoService. getgithubpublicREpos().subscribe(myRepos =>{
+    this.githubUserRepos = myRepos;
+
+  })
+}
 }
