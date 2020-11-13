@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { UsersComponent } from './users/users.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SerachFormComponent } from './serach-form/serach-form.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { GithubReposService } from './github-repos.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RepositoryComponent,
     UsersComponent,
     NavbarComponent,
-    SerachFormComponent,
     SearchFormComponent,
     NotFoundComponent
   ],
@@ -24,7 +23,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [GithubReposService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
