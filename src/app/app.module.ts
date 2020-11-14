@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule} from '@angular/common/http'
 import { RepositoryComponent } from './repository/repository.component';
 import { UsersComponent } from './users/users.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { GithubReposService } from './github-repos.service';
+// import { GithubReposService } from './github-repos.service';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,10 @@ import { GithubReposService } from './github-repos.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [GithubReposService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
