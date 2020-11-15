@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { GithubReposService } from "../github-repos.service";
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
@@ -12,14 +12,14 @@ export class SearchFormComponent implements OnInit {
   @Output() searchTerm= new EventEmitter<any>();
   
 
-  constructor() { }
+  constructor(private repoService: GithubReposService  ) { }
  
 
   ngOnInit(): void {
   }
 
   search(){
-    // this.searchOutput.emit(this.userName);
+    this.searchTerm.emit(this.userName);
     this.userName = "";
   }
   

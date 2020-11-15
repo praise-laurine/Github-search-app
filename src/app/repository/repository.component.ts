@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
 import { GithubReposService } from '../github-repos.service';
 import { Repos } from '../repository';
+import { User } from "../user";
 
 
 
@@ -13,7 +15,7 @@ import { Repos } from '../repository';
 export class RepositoryComponent implements OnInit {
 
 
-title = 'github-serach';
+
 
 //   githubUserRepos: any =[];
 //   constructor(public repoService : GithubReposService){
@@ -33,7 +35,7 @@ title = 'github-serach';
 //   })
 // }
 // }
-
+user: User;
 repo: Repos;
 constructor( public repoService: GithubReposService ) { }
 

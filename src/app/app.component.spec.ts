@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'github-serach'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('github-serach');
+    expect(app).toEqual('github-serach');
   });
 
   it('should render title', () => {
