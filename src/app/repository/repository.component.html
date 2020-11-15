@@ -1,19 +1,19 @@
 
 <div class="container">
+  <app-search-form (searchOutput)= "repoSearch($event)"></app-search-form>
+
     <div class="text-center p-5">
       <h2>
-        Laurine praise
-        <br>
-        <small class="text-muted ">My Github Repositories</small>
+        <small class="text-muted ">Github Repositories</small>
       </h2>
     </div>
     <div class="row">
-      <div class="col-md-4" *ngFor="let repo of githubUserRepos">
+      <div class="col-md-4" *ngFor="let Repositories of repo">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">{{repo.name}}</h5>
             <p class="card-text">{{repo.description}}</p>
-            <p class="card-number">{{repo.followers}}</p>
+            <p class="card-text">{{repo.language}}</p>
   
             <a href="{{repo.html_url}}" _target="blank" class="btn btn-info">View repo</a>
           </div>
@@ -29,7 +29,7 @@
     
     .card{
         height: 240px;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
   </style>
