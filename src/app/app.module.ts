@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { from } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { GithubReposService } from './github-repos.service';
+import { DateCountPipe } from './date-count.pipe';
 // import { NgProgressModule } from '@ngx-progressbar/core';
 // import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
@@ -22,7 +23,8 @@ import { GithubReposService } from './github-repos.service';
     RepositoryComponent,
     NavbarComponent,
     SearchFormComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DateCountPipe
 
   ],
   imports: [
