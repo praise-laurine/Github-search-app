@@ -6,9 +6,9 @@
         <small class="text-muted ">Github Repositories</small>
       </h2>
     </div>
-    <div class="row">
+    <div class="row" id="allrepos">
       <div class="col-md-4" *ngFor="let repo of repo">
-        <div class="card">
+        <div class="card" id="repo">
           <div class="card-body">
             <h5 class="card-title">Name: {{repo.name}}</h5>
             <p class="card-text">Descrition: {{repo.description}}</p>

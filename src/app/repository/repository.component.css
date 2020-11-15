@@ -8,3 +8,17 @@
   background-color:rgba(232, 253, 255, 0.705);
 
 } */
+
+#repo{
+  background-color:rgba(232, 253, 255, 0.705);
+  color: black;
+  margin-bottom: 2%;
+  border-radius: 4px; 
+  opacity: 0.6;
+  
+}
+.allrepos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
