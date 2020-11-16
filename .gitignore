@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# api key
+apiKey:"d40f25f5f47b6afefb9d3381eecae433994b2fa7"

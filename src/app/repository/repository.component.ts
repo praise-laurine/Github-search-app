@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 import { GithubReposService } from '../github-repos.service';
 import { Repos } from '../repository';
-import { User } from "../user";
+import { Users } from "../users";
 
 
 
@@ -14,43 +14,28 @@ import { User } from "../user";
 
 export class RepositoryComponent implements OnInit {
 
-
-
-
-//   githubUserRepos: any =[];
-//   constructor(public repoService : GithubReposService){
-//     // this.getRepos();
-//   }
-//   ngOnInit():void {
-//     this.getRepos();
-
-
-//   }
-
-//   getRepos(){
-//   this.repoService. getgithubpublicREpos().subscribe(myRepos =>{
-//     this.githubUserRepos = myRepos;
-//     console.log(JSON.stringify(myRepos));
-
-//   })
-// }
-// }
-user: User;
+users: Users;
 repo: Repos;
 constructor( public repoService: GithubReposService ) { }
 
+
 repoSearch(userName){
-  this.repoService.getgithubpublicREpos(userName).then(
-    (results)=>{
-      this.repo =this.repoService.allRepos
-      console.log(this.repo);
+  this.repoService.repoSearch(userName).then(
+    ( success)=>{
+      this.users = this.repoService.searchUser;
     },
     (error)=>{
-      console.log(error);
     }
-  );
-}
-
+   )
+   this.repoService.getgithubpublicREpos(userName).then(
+     ( success)=>{
+       this.repo = this.repoService.allRepos;
+     },
+     (error)=>{
+       console.log(error)
+     }
+    )
+ }
 ngOnInit() {
   this.repoSearch('praise-laurine');
 }

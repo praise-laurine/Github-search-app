@@ -1,21 +1,60 @@
-
+<div class="overlay">
 <div class="container">
+ 
   <app-search-form (searchTerm)= "repoSearch($event)"></app-search-form>
-   <div class="text-center p-5">
-      <h2>
-        <small class="text-muted " style="font-family: 'Gabriela', serif;">Github Repositories</small>
-      </h2>
+
+  <div class="row">
+    <div class="col-md-6" id="imgCard">
+      <div class="userimage">
+        <div class="card-img-top">
+        <img style="border-radius: 30px; bottom: 20px;" src="{{users.avatar_url}}" alt="">
+        </div>
+      </div>
     </div>
-    <div class="row" id="allrepos">
+    <div class="col-md-6">
+      <div id="card" appHighlight>
+        <div class="card-body" style="font-family: 'Gabriela', serif;">
+          <div class="title">
+        <h2 style="text-decoration: underline;">Profile Information</h2>
+          </div>
+        <p *ngIf="users.login">
+            <span>UserName:</span>
+            {{ users.login }}
+        </p>
+        <!-- <p><span>Bio:</span>
+            {{user.bio}}
+        </p> -->
+        <p><span>Repositories:</span>
+            {{users.public_repos}}
+        </p>
+        <p> Followers:
+            {{ users.followers }}
+        </p>
+        <p> Following:
+            {{ users.following }}
+        </p>
+        <p> Joined:
+          {{ users.created_at | date}}
+      </p>
+    </div>
+</div>
+ </div>
+
+
+   <div class="text-center p-5" style="text-align: center; color: #ffffff; font-weight: bolder;">
+      <div class="heaading">
+        <h1 class="text-muted " style="font-family: 'Gabriela', serif; ">Github Repositories</h1>
+      </div>
+    </div>
+       <div class="row" id="allrepos">
       <div class="col-md-4" *ngFor="let repo of repo">
         <div class="card" id="repo">
           <div class="card-body">
             <h5 class="card-title">Name: {{repo.name}}</h5>
             <p class="card-text">Descrition: {{repo.description}}</p>
             <p class="card-text">Language: {{repo.language}}</p>
-            <p class="card-text">created at: {{repo.created_at | date}}</p>
+            <p class="card-text">created on: {{repo.created_at | date}}</p>
 
-            <!-- <div><img src="{{ user.avatar_url}}"></div>  -->
   
             <a href="{{repo.html_url}}" _target="blank" class="btn btn-info">View repo</a>
 
@@ -25,6 +64,7 @@
       </div>
   
      </div>
+  </div>
   </div>
  
 
@@ -37,7 +77,7 @@
     
     
     .card{
-        height: 330px;
+        height: 370px;
         margin-bottom: 50px;
     }
 
@@ -59,6 +99,15 @@
 
 
 
+
+
+
+
+
+
+
+
+ 
 
 
 
