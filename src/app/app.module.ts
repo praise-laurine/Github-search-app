@@ -7,7 +7,7 @@ import { HttpClientModule} from '@angular/common/http'
 import { RepositoryComponent } from "../app/repository/repository.component";
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchFormComponent } from './search-form/search-form.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+// import { NotFoundComponent } from './not-found/not-found.component';
 // import { GithubReposService } from './github-repos.service';
 import { from } from 'rxjs';
 import { FormsModule } from '@angular/forms';
@@ -23,7 +23,7 @@ import { DateCountPipe } from './date-count.pipe';
     RepositoryComponent,
     NavbarComponent,
     SearchFormComponent,
-    NotFoundComponent,
+    // NotFoundComponent,
     DateCountPipe
 
   ],
